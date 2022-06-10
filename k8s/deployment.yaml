@@ -51,7 +51,7 @@ spec:
     spec:
       containers:
       - name: kubenews
-        image: juniormarques/kube-news:v2 
+        image: juniormarques/kube-news:v1 
         env: 
         - name: DB_DATABASE    
           value: "kubenews_fofoquinha"
@@ -73,6 +73,6 @@ spec:
   - port: 80
     targetPort: 8080
     nodePort: 30000  
-  type: NodePort 
+  type: LoadBalancer 
 
 
